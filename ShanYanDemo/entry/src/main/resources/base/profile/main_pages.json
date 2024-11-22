@@ -1,0 +1,7 @@
+{
+  "src": [
+    "pages/LaunchPage",
+    "pages/MenuPage",
+    "pages/NumberCheckPage"
+  ]
+}

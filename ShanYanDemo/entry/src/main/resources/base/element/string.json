@@ -1,0 +1,28 @@
+{
+  "string": [
+    {
+      "name": "module_desc",
+      "value": "module description"
+    },
+    {
+      "name": "EntryAbility_desc",
+      "value": "description"
+    },
+    {
+      "name": "EntryAbility_label",
+      "value": "闪验"
+    },
+    {
+      "name": "GET_NETWORK_INFO",
+      "value": "继续使用需要获取网络信息权限"
+    },
+    {
+      "name": "GET_INTERNET",
+      "value": "继续使用需要获取访问网络权限"
+    },
+    {
+      "name": "SET_NETWORK",
+      "value": "继续使用需要获取设置网络权限"
+    }
+  ]
+}

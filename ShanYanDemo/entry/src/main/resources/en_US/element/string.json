@@ -1,0 +1,28 @@
+{
+  "string": [
+    {
+      "name": "module_desc",
+      "value": "module description"
+    },
+    {
+      "name": "EntryAbility_desc",
+      "value": "description"
+    },
+    {
+      "name": "EntryAbility_label",
+      "value": "ShanYan"
+    },
+    {
+      "name": "GET_NETWORK_INFO",
+      "value": "Continuing to use requires obtaining NETWORK information permission"
+    },
+    {
+      "name": "GET_INTERNET",
+      "value": "Continuing to use requires obtaining INTERNET permission"
+    },
+    {
+      "name": "SET_NETWORK",
+      "value": "Continuing to use requires obtaining INTERNET permission"
+    }
+  ]
+}
