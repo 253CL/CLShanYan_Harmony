@@ -7,18 +7,18 @@
 
 export class QueryMobileModel {
   chargeStatus: number = 0
-  message: string = ""
-  code: string = ""
+  message: string = ''
+  code: string = ''
   data: QueryMobileData = new QueryMobileData()
 }
 
 export class QueryMobileData {
-  tradeNo: string = ""
-  mobileName: string = ""
+  tradeNo: string = ''
+  mobileName: string = ''
 }
 
 export class CheckModel {
-  code: string = ""
-  token: string = ""
-  phoneNumber: string = ""
+  code: string = ''
+  token: string = ''
+  phoneNumber: string = ''
 }

@@ -1,13 +1,13 @@
 {
   "name": "entry",
-  "version": "1.0.0",
-  "description": "Please describe the basic information.",
+  "version": "1.0.1",
+  "description": "一键登录demo",
   "main": "",
-  "author": "",
+  "author": "ya dong",
   "license": "",
   "dependencies": {
     "@ohos/axios": "^2.2.4",
-    "@yd/security": "^1.0.9",
+    "@yd/security": "^1.1.1",
     "shanyansdk": "file:./libs/ShanYanSDK.har"
   }
 }

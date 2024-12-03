@@ -32,8 +32,8 @@ struct LaunchPage {
     Column() {
       Row() {
         Text() {
-          Span("跳过")
-          Span(": " + this.duration)
+          Span('跳过')
+          Span(': ' + this.duration)
         }
         .fontSize(12)
         .fontColor(Color.White)
