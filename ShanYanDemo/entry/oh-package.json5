@@ -7,7 +7,7 @@
   "license": "",
   "dependencies": {
     "@ohos/axios": "^2.2.4",
-    "@yd/security": "^1.1.1",
+    "@yd/security": "^1.1.7",
     "shanyansdk": "file:./libs/ShanYanSDK.har"
   }
 }

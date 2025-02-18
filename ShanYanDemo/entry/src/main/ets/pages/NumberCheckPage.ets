@@ -5,8 +5,8 @@
 // Author     ：ya dong
 // Copyright © 2024 CL. All rights reserved.
 
-import { App, router } from '@kit.ArkUI'
 import HiLogUtils from '../utils/HiLogUtils'
+import { router } from '@kit.ArkUI'
 import { CLResult, CLSDKManager } from 'shanyansdk'
 
 @Entry

@@ -6,10 +6,10 @@
 // Copyright © 2024 CL. All rights reserved.
 
 import HiLogUtils from '../utils/HiLogUtils'
+import AppConfig from '../AppConfig'
 import router from '@ohos.router'
 import axios, { AxiosResponse } from '@ohos/axios'
 import { CheckModel, QueryMobileModel } from '../model/QueryMobileModel'
-import AppConfig from '../AppConfig'
 import { CLResult, CLSDKManager, CLUIConfigure, CLAuthLoginCallBack } from 'shanyansdk'
 import { promptAction, window } from '@kit.ArkUI'
 import { Security } from '@yd/security'
@@ -78,7 +78,6 @@ struct MenuPage {
           })
           .backgroundColor($r('app.color.start_btn_background'))
           .onClick(async () => {
-            CLSDKManager.printConsoleEnable(true)
             const result: CLResult = await CLSDKManager.init(getContext(this), AppConfig.APP_ID)
             this.message = '初始化 : code:' + result.code + ' msg:' + result.message
             HiLogUtils.info(this.message)
@@ -123,7 +122,6 @@ struct MenuPage {
             config.navTextColor = Color.White
             config.navColor = Color.Pink
 
-            config.appLanguageType = 1
 
             // 登录按钮点击监听事件  （勾选后进入正常的授权登录）
             config.loginClickListener = ({
@@ -141,7 +139,8 @@ struct MenuPage {
               async onBackPressed() {
                 HiLogUtils.info('backPressedListener：返回')
                 let systemBarProperties: window.SystemBarProperties = {
-                  statusBarColor: '#ffffff'
+                  statusBarColor: '#ffffff',
+                  statusBarContentColor: '#000000',
                 }
                 let windowClass: window.Window = await window.getLastWindow(getContext(this))
                 await windowClass.setWindowSystemBarProperties(systemBarProperties)
@@ -296,7 +295,7 @@ struct MenuPage {
             if (this.oneKeyResult.code === 1000) {
               try {
                 let sh256String = 'appId' + AppConfig.APP_ID + 'token' + this.oneKeyResult.data.get('token')
-                let sign: string = (await Security.HMacSha256(sh256String, AppConfig.APP_KEY)).hex()
+                let sign: string = (await Security.hMacSha256(sh256String, AppConfig.APP_KEY)).hex()
 
                 interface mobileQuery {
                   appId: string,
@@ -377,7 +376,7 @@ struct MenuPage {
                 let sh256String =
                   'appId' + AppConfig.APP_ID + 'mobile' + this.checkModel.phoneNumber + 'token' + this.checkModel.token
                 HiLogUtils.info(sh256String)
-                let sign: string = (await Security.HMacSha256(sh256String, AppConfig.APP_KEY)).hex()
+                let sign: string = (await Security.hMacSha256(sh256String, AppConfig.APP_KEY)).hex()
 
                 interface mobileValidate {
                   appId: string,
