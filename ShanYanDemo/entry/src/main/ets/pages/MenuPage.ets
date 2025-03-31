@@ -17,6 +17,7 @@ import { Security } from '@yd/security'
 @Entry
 @Component
 struct MenuPage {
+  @State isOn:boolean = false
   @State message: string = '结果展示：'
   oneKeyResult: CLResult = new CLResult(0, '')
   checkModel: CheckModel = new CheckModel()
@@ -242,6 +243,18 @@ struct MenuPage {
                 fontWeight: FontWeight.Bold
               }]
 
+            config.windowMode = this.isOn
+            let dialogViewController = new CustomDialogController({
+              builder:(await config.getAuthBuilder()).builder,
+              // maskColor:Color.Transparent,
+              width:'90%',
+              height:'60%',
+              offset: { dx:0,dy:'5%' },
+              customStyle:false,
+              alignment:DialogAlignment.Center,
+            })
+            config.dialogViewController = dialogViewController
+
             let pgResult: CLResult =
               await CLSDKManager.quickAuthLoginWithConfigure(config, async (result: CLResult) => {
                 if (result.code === 1000) {
@@ -421,6 +434,14 @@ struct MenuPage {
             HiLogUtils.info(this.message)
             await CLSDKManager.clearScripCache()
           })
+        Row(){
+          Text('窗口模式是否开启：')
+          Toggle({type:ToggleType.Switch,isOn:false})
+            .onChange((isOn:boolean)=>{
+              this.isOn = isOn
+            })
+        }.alignItems(VerticalAlign.Center)
+        .justifyContent(FlexAlign.SpaceBetween)
       }.height('80%')
       .width('100%')
     }
