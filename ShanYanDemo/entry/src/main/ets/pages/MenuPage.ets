@@ -80,7 +80,7 @@ struct MenuPage {
           .backgroundColor($r('app.color.start_btn_background'))
           .onClick(async () => {
             const result: CLResult = await CLSDKManager.init(getContext(this), AppConfig.APP_ID)
-            this.message = '初始化 : code:' + result.code + ' msg:' + result.message
+            this.message = '初始化 : code:' + result.code + ' msg:' + result.message + '\n当前版本：' + CLSDKManager.clSDKVersion()
             HiLogUtils.info(this.message)
           })
 
@@ -98,7 +98,7 @@ struct MenuPage {
             this.message =
               '预取号 : code:' + result.code + ' msg:' + result.message + ' innerCode:' +
               result.innerCode
-                + ' innerMsg:' + result.innerDesc
+                + ' innerMsg:' + result.innerDesc + result.data.get('slogan')
             HiLogUtils.info(this.message)
           })
 
