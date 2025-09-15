@@ -10,7 +10,7 @@ import AppConfig from '../AppConfig'
 import router from '@ohos.router'
 import axios, { AxiosResponse } from '@ohos/axios'
 import { CheckModel, QueryMobileModel } from '../model/QueryMobileModel'
-import { CLResult, CLSDKManager, CLUIConfigure, CLAuthLoginCallBack } from 'shanyansdk'
+import { CLResult, CLSDKManager, CLUIConfigure, CLAuthLoginCallBack } from '@shanyan/shanyansdk'
 import { promptAction, window } from '@kit.ArkUI'
 import { Security } from '@yd/security'
 

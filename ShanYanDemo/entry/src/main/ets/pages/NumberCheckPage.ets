@@ -7,7 +7,7 @@
 
 import HiLogUtils from '../utils/HiLogUtils'
 import { router } from '@kit.ArkUI'
-import { CLResult, CLSDKManager } from 'shanyansdk'
+import { CLResult, CLSDKManager } from '@shanyan/shanyansdk'
 
 @Entry
 @Component

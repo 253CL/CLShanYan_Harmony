@@ -13,12 +13,27 @@
           "signAlg": "SHA256withECDSA",
           "storeFile": "/Users/ydong/.ohos/config/default_ShanYan_3E0a0trGNRcOf4a1z6E3bexyz3oQ3YWjpoB15-k59O8=.p12"
         }
+      },
+      {
+        "name": "stablerelease",
+        //com.harmony.shanyanrelease
+        "type": "HarmonyOS",
+        "material": {
+          "certpath": "/Users/ydong/.ohos/config/stablerelease_ShanYan_-adP09EMYb5yojs8J-wNFmPjhlsuPFTP7rH0JQ5BuhA=.cer",
+          "storePassword": "0000001B453FAB789C22DEB7657E0547DDD16D1684E588488BE6A1ADAAC9688C8402BCBF0E6A569C15AB8D",
+          "keyAlias": "debugKey",
+          "keyPassword": "0000001BD6F59A506C4CD7E1211FBA6A70378087F3F3E363372EA8957597809A598C63CD55F591A91C1E6B",
+          "profile": "/Users/ydong/.ohos/config/stablerelease_ShanYan_-adP09EMYb5yojs8J-wNFmPjhlsuPFTP7rH0JQ5BuhA=.p7b",
+          "signAlg": "SHA256withECDSA",
+          "storeFile": "/Users/ydong/.ohos/config/stablerelease_ShanYan_-adP09EMYb5yojs8J-wNFmPjhlsuPFTP7rH0JQ5BuhA=.p12"
+        }
       }
+
     ],
     "products": [
       {
         "name": "default",
-        "signingConfig": "default",
+        "signingConfig": "stablerelease",
         "compatibleSdkVersion": "5.0.0(12)",
         "runtimeOS": "HarmonyOS",
         "buildOption": {

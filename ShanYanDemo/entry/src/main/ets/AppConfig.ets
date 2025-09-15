@@ -6,7 +6,7 @@
 // Copyright © 2024 CL. All rights reserved.
 
 export default class AppConfig {
-  static readonly APP_ID: string = 'F5QV60tc'
+  static readonly APP_ID: string = 'F6lfp6m4'
   static readonly APP_KEY: string = ''
   static readonly URL_MobileQuery: string = 'https://api.253.com/open/flashsdk/mobile-query'
   static readonly URL_MobileValidate: string = 'https://api.253.com/open/flashsdk/mobile-validate'
